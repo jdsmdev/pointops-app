@@ -1,16 +1,61 @@
-# React + Vite
+# PointOps – Planning Poker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, frontend-only **Planning Poker** app for agile teams to estimate story points collaboratively.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Join screen** – enter your name to start a session
+- **Fibonacci card deck** – standard planning poker values: `0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ?, ☕`
+- **Participant management** – add or remove teammates during a session
+- **Hidden votes** – cards are face-down until the facilitator reveals them
+- **Results panel** – shows the average, most common vote, and a per-participant breakdown; displays a consensus banner when everyone agrees
+- **New Round** – resets all votes and increments the round counter
+- **Dark mode** – respects the OS preference automatically
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- [Node.js](https://nodejs.org/) 18 or later
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run in development mode
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Build for production
+
+```bash
+npm run build
+```
+
+The production build is output to the `dist/` folder.
+
+### Preview the production build
+
+```bash
+npm run preview
+```
+
+## Usage
+
+1. Enter your name on the join screen and click **Start Session**.
+2. Optionally add other participants using the sidebar form.
+3. Each participant selects a card from the deck (click again to deselect).
+4. When ready, click **Reveal Votes** to show everyone's estimate.
+5. Review the results, then click **New Round** to reset for the next ticket.
+
+## Tech Stack
+
+- [React 19](https://react.dev/)
+- [Vite](https://vite.dev/)
+- CSS Modules
