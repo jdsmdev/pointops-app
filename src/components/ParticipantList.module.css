@@ -1,0 +1,102 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.participant {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: border-color 0.2s;
+}
+
+.self {
+  border-color: var(--accent-border);
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  text-align: left;
+  min-width: 0;
+}
+
+.name {
+  font-weight: 600;
+  color: var(--text-h);
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.youBadge {
+  font-weight: 400;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.status {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.voteBox {
+  width: 44px;
+  height: 60px;
+  border-radius: 6px;
+  border: 2px solid var(--border);
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.hasVote {
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+}
+
+.revealed {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.faceDown {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.voteValue {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.noVote {
+  font-size: 18px;
+  color: var(--border);
+}
